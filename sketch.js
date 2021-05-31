@@ -9,12 +9,12 @@ const Body = Matter.Body;
 
 function preload()
 {
-	starImg = loadImage("star.png");
-	bgImg = loadImage("starryNight.jpg");
+	starImg = loadImage("images/star.png");
+	bgImg = loadImage("images/starryNight.jpg");
 	//load animation for fairy here
-	fairyImg = loadImage("fairyImage1.png","fairyImage2.png");
+	fairyImg = loadAnimation("images/fairyImage1.png","images/fairyImage2.png");
 
-	sound = loadSound("JoyMusic.mp3");
+	sound = loadSound("sound/JoyMusic.mp3");
 }
 
 function setup() {
@@ -30,7 +30,7 @@ function setup() {
 	star.scale = 0.27;
 
 	Fairy = createSprite(120,500);
-	Fairy.addImage(fairyImg);	
+	Fairy.addAnimation("fairy",fairyImg);	
 	Fairy.scale = 0.3;
 
 	engine = Engine.create();
